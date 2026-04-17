@@ -83,7 +83,7 @@ const HeroSection = () => {
           <img
             src={shadiEndImg}
             alt="Wedding celebration"
-            className="absolute inset-0 w-full h-[235%] object-cover object-center transform transition-transform duration-[15s] hover:scale-110"
+            className="absolute inset-0 w-full h-[165%] object-cover object-center transform transition-transform duration-[15s] hover:scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#2C1810]/70 via-[#2C1810]/20 to-transparent" />
           <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4">
