@@ -29,9 +29,8 @@ const OpeningScreen = ({ onOpenInvitation, isMusicPlaying, toggleMusic }) => {
       </div>
 
       <div className="relative z-10 w-full max-w-7xl">
-        <div className={`panel-surface mx-auto overflow-hidden rounded-[2rem] sm:rounded-[2.4rem] transition-all duration-1000 ${
-          showText ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-6 scale-95'
-        }`}>
+        <div className={`panel-surface mx-auto overflow-hidden rounded-[2rem] sm:rounded-[2.4rem] transition-all duration-1000 ${showText ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-6 scale-95'
+          }`}>
           <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
             <section className="px-6 py-8 sm:px-10 sm:py-12 lg:px-14 lg:py-16">
               <div className="pill-label animate-pop-in inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-bold tracking-[0.26em] uppercase">
@@ -61,9 +60,12 @@ const OpeningScreen = ({ onOpenInvitation, isMusicPlaying, toggleMusic }) => {
               </p>
 
               <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3 opacity-0 animate-rise-fade [animation-fill-mode:forwards]" style={{ animationDelay: '1700ms' }}>
-                <div className="soft-card rounded-2xl px-4 py-3.5 text-sm font-medium text-[#3E2723]">Luxury floral design</div>
-                <div className="soft-card rounded-2xl px-4 py-3.5 text-sm font-medium text-[#3E2723]">Traditional ceremony</div>
-                <div className="soft-card rounded-2xl px-4 py-3.5 text-sm font-medium text-[#3E2723]">Family togetherness</div>
+                <div className="soft-card rounded-2xl px-4 py-3.5 text-sm font-medium text-[#3E2723]">28 April 2026 <br></br>
+                  Mata Pujan / माता पूजन</div>
+                <div className="soft-card rounded-2xl px-4 py-3.5 text-sm font-medium text-[#3E2723]">30 April 2026 <br></br>
+                  Juloos / जुलूस</div>
+                <div className="soft-card rounded-2xl px-4 py-3.5 text-sm font-medium text-[#3E2723]">2 May 2026 <br></br>
+                  Shadi / शादी</div>
               </div>
 
               {showButton && (

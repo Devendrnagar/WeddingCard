@@ -65,7 +65,7 @@ const CountdownTimer = () => {
 
           <div className="mt-12 flex justify-center">
              <div className="inline-block bg-[#D4AF37]/10 border-2 border-[#D4AF37]/50 px-8 py-3 rounded-full text-sm font-bold text-[#B8860B] tracking-[0.2em] uppercase animate-pulse shadow-[0_0_15px_rgba(212,175,55,0.2)]">
-                Save The Date · 2 May 2026
+               28 Apr 2026 Mata Pujan · 30 Apr 2026 Juloos · 2 May 2026 Shadi
              </div>
           </div>
         </div>

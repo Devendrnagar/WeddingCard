@@ -22,8 +22,24 @@ const HeroSection = () => {
             Wedding Invitation
           </span>
           <span className="soft-card rounded-full px-5 py-2.5 text-[11px] font-semibold tracking-[0.24em] uppercase text-[#D4AF37] sm:text-xs">
-            Save the date · 2 May 2026
+            Save the Date · Shadi / शादी · 2 May 2026
           </span>
+        </div>
+
+        <div className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-3">
+          {[
+            { label: 'Mata Pujan / माता पूजन', date: '28 April 2026' },
+            { label: 'Juloos / जुलूस', date: '30 April 2026' },
+            { label: 'Shadi / शादी', date: '2 May 2026' },
+          ].map((event) => (
+            <div
+              key={event.label}
+              className="rounded-2xl border border-[#D4AF37]/40 bg-[#FDFBF7]/75 px-4 py-3 text-left shadow-sm backdrop-blur-sm"
+            >
+              <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#B8860B]">{event.date}</p>
+              <p className="mt-1 text-sm font-semibold text-[#3E2723]">{event.label}</p>
+            </div>
+          ))}
         </div>
 
         <h1 className="section-title mt-10 animate-fade-scale-in text-6xl leading-[0.96] text-[#2C1810] sm:text-7xl lg:text-8xl relative z-10 font-bold">
@@ -67,7 +83,7 @@ const HeroSection = () => {
           <img
             src={shadiEndImg}
             alt="Wedding celebration"
-            className="absolute inset-0 w-full h-full object-cover object-center transform transition-transform duration-[15s] hover:scale-110"
+            className="absolute inset-0 w-full h-[235%] object-cover object-center transform transition-transform duration-[15s] hover:scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#2C1810]/70 via-[#2C1810]/20 to-transparent" />
           <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4">

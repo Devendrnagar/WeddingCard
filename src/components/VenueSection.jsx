@@ -41,7 +41,7 @@ const VenueSection = () => {
                 <span className="flex items-center justify-center w-12 h-12 rounded-full bg-[#fdfbf7] border border-[#D4AF37]/40 text-[#D4AF37] text-xl shadow-md">🕒</span>
                 <div>
                    <p className="font-bold text-[#3E2723] text-lg">When</p>
-                   <p className="text-[#5C3A21] leading-relaxed mt-1">Saturday, May 2, 2026<br/>7:00 PM onwards</p>
+                 <p className="text-[#5C3A21] leading-relaxed mt-1">Saturday, May 2, 2026 (Shadi / शादी)<br/>7:00 PM onwards</p>
                 </div>
              </div>
 
