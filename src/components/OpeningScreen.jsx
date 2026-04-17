@@ -6,6 +6,27 @@ const OpeningScreen = ({ onOpenInvitation, isMusicPlaying, toggleMusic }) => {
   const [showText, setShowText] = useState(false)
   const [showPortraits, setShowPortraits] = useState(false)
 
+  const ceremonyEvents = [
+    {
+      date: '28 April 2026',
+      titleEn: 'Mata Pujan',
+      titleHi: 'माता पूजन',
+      tone: 'from-[#FFF8E8] to-[#FDF2CC]'
+    },
+    {
+      date: '30 April 2026',
+      titleEn: 'Juloos',
+      titleHi: 'जुलूस',
+      tone: 'from-[#FFF7ED] to-[#FFE9CF]'
+    },
+    {
+      date: '2 May 2026',
+      titleEn: 'Shadi',
+      titleHi: 'शादी',
+      tone: 'from-[#FFF2F2] to-[#FFE2E2]'
+    }
+  ]
+
   useEffect(() => {
     const textTimer = setTimeout(() => setShowText(true), 250)
     const portraitTimer = setTimeout(() => setShowPortraits(true), 650)
@@ -59,13 +80,33 @@ const OpeningScreen = ({ onOpenInvitation, isMusicPlaying, toggleMusic }) => {
                 Open the invitation to explore every beautiful moment.
               </p>
 
-              <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3 opacity-0 animate-rise-fade [animation-fill-mode:forwards]" style={{ animationDelay: '1700ms' }}>
-                <div className="soft-card rounded-2xl px-4 py-3.5 text-sm font-medium text-[#3E2723]">28 April 2026 <br></br>
-                  Mata Pujan / माता पूजन</div>
-                <div className="soft-card rounded-2xl px-4 py-3.5 text-sm font-medium text-[#3E2723]">30 April 2026 <br></br>
-                  Juloos / जुलूस</div>
-                <div className="soft-card rounded-2xl px-4 py-3.5 text-sm font-medium text-[#3E2723]">2 May 2026 <br></br>
-                  Shadi / शादी</div>
+              <div className="mt-8 opacity-0 animate-rise-fade [animation-fill-mode:forwards]" style={{ animationDelay: '1700ms' }}>
+                <div className="mb-3 flex items-center justify-between px-1">
+                  <p className="text-[11px] font-bold tracking-[0.24em] text-[#B8860B] uppercase">Ceremony Timeline</p>
+                  <p className="text-xs font-semibold text-[#8D6E63]">3 Rituals</p>
+                </div>
+
+                <div className="soft-card rounded-3xl border border-[#D4AF37]/20 bg-white/70 p-2.5 backdrop-blur-sm">
+                  <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
+                    {ceremonyEvents.map((event, index) => (
+                      <article
+                        key={event.titleEn}
+                        className={`group relative overflow-hidden rounded-2xl border border-[#D4AF37]/15 bg-gradient-to-br ${event.tone} p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_30px_rgba(62,39,35,0.12)]`}
+                      >
+                        <div className="absolute right-3 top-3 rounded-full bg-white/70 px-2 py-0.5 text-[10px] font-bold tracking-[0.12em] text-[#7A5B3F] uppercase">
+                          Day {index + 1}
+                        </div>
+                        <p className="text-xs font-bold tracking-[0.16em] text-[#8D6E63] uppercase">{event.date}</p>
+                        <p className="mt-3 font-display text-2xl text-[#2C1810] leading-tight">{event.titleEn}</p>
+                        <p className="mt-1 text-sm font-semibold text-[#5C3A21]">{event.titleHi}</p>
+
+                        {index < ceremonyEvents.length - 1 && (
+                          <span className="pointer-events-none absolute -right-1.5 top-1/2 hidden h-2.5 w-2.5 -translate-y-1/2 rounded-full border border-[#D4AF37]/40 bg-[#F7E7B0] sm:block" />
+                        )}
+                      </article>
+                    ))}
+                  </div>
+                </div>
               </div>
 
               {showButton && (
